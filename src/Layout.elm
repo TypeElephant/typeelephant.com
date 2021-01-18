@@ -1,11 +1,11 @@
 module Layout exposing (view)
 
-import DocumentSvg
 import Element exposing (Element)
 import Element.Background
 import Element.Border
 import Element.Font as Font
 import Element.Region
+import ElephantSvg
 import Html exposing (Html)
 import Metadata exposing (Metadata)
 import Pages
@@ -73,7 +73,7 @@ header currentPath =
                 { url = "/"
                 , label =
                     Element.row [ Font.size 30, Element.spacing 16 ]
-                        [ DocumentSvg.view
+                        [ ElephantSvg.view
                         , Element.text "Type Elephant"
                         ]
                 }
