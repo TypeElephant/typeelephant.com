@@ -21,6 +21,10 @@ all =
       , avatar = Pages.images.author.dillon
       , bio = "Elm developer and educator. Founder of Incremental Elm Consulting."
       }
+    , { name = "John Schoeman"
+      , avatar = Pages.images.author.john
+      , bio = "Co founder of TypeElephant."
+      }
     ]
 
 

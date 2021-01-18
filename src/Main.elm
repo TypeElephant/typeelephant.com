@@ -32,12 +32,12 @@ manifest =
     , categories = [ Pages.Manifest.Category.education ]
     , displayMode = Manifest.Standalone
     , orientation = Manifest.Portrait
-    , description = "elm-pages-starter - A statically typed site generator."
+    , description = "typeelephant.com - The marking website for Type Elephant"
     , iarcRatingId = Nothing
-    , name = "elm-pages-starter"
+    , name = "Type Elephant"
     , themeColor = Just Color.white
     , startUrl = pages.index
-    , shortName = Just "elm-pages-starter"
+    , shortName = Just "Type Elephant"
     , sourceIcon = images.iconPng
     , icons = []
     }
@@ -45,11 +45,6 @@ manifest =
 
 type alias Rendered =
     Element Msg
-
-
-
--- the intellij-elm plugin doesn't support type aliases for Programs so we need to use this line
--- main : Platform.Program Pages.Platform.Flags (Pages.Platform.Model Model Msg Metadata Rendered) (Pages.Platform.Msg Msg Metadata Rendered)
 
 
 main : Pages.Platform.Program Model Msg Metadata Rendered Pages.PathKey
@@ -130,7 +125,10 @@ update msg model =
             ( model, Cmd.none )
 
 
+
 --subscriptions : Model -> Sub Msg
+
+
 subscriptions _ _ _ =
     Sub.none
 
@@ -187,7 +185,7 @@ pageView model siteMetadata page viewForPage =
             }
 
         Metadata.BlogIndex ->
-            { title = "elm-pages blog"
+            { title = "Type Elephant blog"
             , body =
                 [ Element.column [ Element.padding 20, Element.centerX ] [ Index.view siteMetadata ]
                 ]
@@ -218,10 +216,10 @@ head metadata =
                 Metadata.Page meta ->
                     Seo.summaryLarge
                         { canonicalUrlOverride = Nothing
-                        , siteName = "elm-pages-starter"
+                        , siteName = "type-elephant"
                         , image =
                             { url = images.iconPng
-                            , alt = "elm-pages logo"
+                            , alt = "type-elephant logo"
                             , dimensions = Nothing
                             , mimeType = Nothing
                             }
@@ -234,7 +232,7 @@ head metadata =
                 Metadata.Article meta ->
                     Seo.summaryLarge
                         { canonicalUrlOverride = Nothing
-                        , siteName = "elm-pages starter"
+                        , siteName = "type-elephant"
                         , image =
                             { url = meta.image
                             , alt = meta.description
@@ -271,16 +269,16 @@ head metadata =
                     in
                     Seo.summary
                         { canonicalUrlOverride = Nothing
-                        , siteName = "elm-pages-starter"
+                        , siteName = "type-elephant"
                         , image =
                             { url = meta.avatar
-                            , alt = meta.name ++ "'s elm-pages articles."
+                            , alt = meta.name ++ "'s type-elephant articles."
                             , dimensions = Nothing
                             , mimeType = Nothing
                             }
                         , description = meta.bio
                         , locale = Nothing
-                        , title = meta.name ++ "'s elm-pages articles."
+                        , title = meta.name ++ "'s type-elephant articles."
                         }
                         |> Seo.profile
                             { firstName = firstName
@@ -291,16 +289,16 @@ head metadata =
                 Metadata.BlogIndex ->
                     Seo.summaryLarge
                         { canonicalUrlOverride = Nothing
-                        , siteName = "elm-pages"
+                        , siteName = "type-elephant"
                         , image =
                             { url = images.iconPng
-                            , alt = "elm-pages logo"
+                            , alt = "type-elephant logo"
                             , dimensions = Nothing
                             , mimeType = Nothing
                             }
                         , description = siteTagline
                         , locale = Nothing
-                        , title = "elm-pages blog"
+                        , title = "type-elephant blog"
                         }
                         |> Seo.website
            )
@@ -308,9 +306,9 @@ head metadata =
 
 canonicalSiteUrl : String
 canonicalSiteUrl =
-    "https://elm-pages-starter.netlify.com"
+    "https://typeelephant.netlify.com"
 
 
 siteTagline : String
 siteTagline =
-    "Starter blog for elm-pages"
+    "Blog for TypeElephant.com"

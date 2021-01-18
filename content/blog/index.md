@@ -1,4 +1,4 @@
 ---
-title: elm-pages blog
+title: typeelephant blog
 type: blog-index
 ---
