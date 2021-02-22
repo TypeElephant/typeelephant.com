@@ -18,3 +18,5 @@ Building Habits is an app that facilitates building better personal habits.
 [Terms Of Use](https://www.typeelephant.com/terms_of_use)
 
 [Privacy Policy](https://www.typeelephant.com/privacy_policy)
+
+[Support](https://www.typeelephant.com/support)
