@@ -49,19 +49,7 @@ view document page =
 header : PagePath Pages.PathKey -> Element msg
 header currentPath =
     Element.column [ Element.width Element.fill ]
-        [ Element.el
-            [ Element.height (Element.px 4)
-            , Element.width Element.fill
-            , Element.Background.gradient
-                { angle = 0.2
-                , steps =
-                    [ Element.rgb255 0 242 96
-                    , Element.rgb255 5 117 230
-                    ]
-                }
-            ]
-            Element.none
-        , Element.row
+        [ Element.row
             [ Element.paddingXY 25 4
             , Element.spaceEvenly
             , Element.width Element.fill
@@ -79,7 +67,6 @@ header currentPath =
                 }
             , Element.row [ Element.spacing 15 ]
                 [ githubRepoLink
-                , highlightableLink currentPath Pages.pages.blog.directory "Blog"
                 ]
             ]
         ]
